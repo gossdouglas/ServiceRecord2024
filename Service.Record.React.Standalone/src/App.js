@@ -1,89 +1,72 @@
 import logo from './logo.svg';
 import './App.css';
 
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import {CORE_CONCEPTS} from './data.js';
+import {RandomDescription} from './components/RandomDescription.jsx';
+import ImageOne from './components/ImageOne.jsx';
+import Navigation from './components/Navigation.jsx';
 
-function Navigation() {
 
-    return (
-        <div>
-            <container class="navigation-bar">
-                <Row>
-                    <Col sm={8}>
-                        <Navbar expand="lg" className="bg-body-tertiary" sticky="top">
-                            {/* <Container> */}
-                            <Navbar.Brand href="#home">Field Service Record</Navbar.Brand>
-                            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                            <Navbar.Collapse id="basic-navbar-nav">
-                                <Nav className="me-auto">
-                                    <Nav.Link href="#home">Current Daily Reports</Nav.Link>
-                                    <Nav.Link href="#home">All Daily Reports</Nav.Link>
-                                    <Nav.Link href="#home">Create New Daily Report</Nav.Link>
-                                    <Nav.Link href="#home">Active Daily Report</Nav.Link>
-                                    <NavDropdown title="Admin Tasks" id="basic-nav-dropdown">
-                                        <NavDropdown.Item href="#action/3.1">Customers</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.2">Jobs</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.3">Sub-job Types</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.3">Resource Types</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.3">Users</NavDropdown.Item>
-                                    </NavDropdown>
-                                </Nav>
-                            </Navbar.Collapse>
-                            {/* </Container> */}
-                        </Navbar>
-                    </Col>
-                    <Col sm={4}>
-                        <Navbar expand="lg" className="bg-body-tertiary" sticky="top">
-                            <Navbar.Brand href="#home">Welcome, Tony</Navbar.Brand>
-                            <Nav.Link href="#home">Log Off</Nav.Link>
-                        </Navbar>
-                    </Col>
-                </Row>
-            </container>
-        </div>
-    );
+function CoreConcept(props) {
+  return (
+    <li>      
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
+      <img src={props.image} alt={props.title} />
+    </li>
+  );
 }
+
+
 
 function Content() {
 
-    return (
-        <div style={{ backgroundColor: "blue", color: "white" }}>
-            <Container>
-                <Row>
-                    <Col>1 of 1</Col>
-                </Row>
-            </Container>
+  return (
+    <div style={{backgroundColor: "blue", color: "white"}}>
+      <Container>
+      <Row>
+        <Col>1 of 1</Col>
+      </Row>
+    </Container>
 
-        </div>
-    );
+    </div>   
+  );
 }
 
 function App() {
   return (
-      <div className="container-grid-test">
-          <div className="header" >
-              {/* sidebar */}
-              {/* sidebar */}
-              <Navigation />
-          </div>
-          <div className="main">
-              {/* <div style={{margin: "5px"}}> */}
-              <div>
-                  main
-              </div>
-
-          </div>
-          <div className="footer">
-              footer
-          </div>
-
+    <div className="container-grid">
+      <div className="header" >
+        <Navigation />
       </div>
+
+      <div className="main">
+          main
+          <RandomDescription/>
+          <ImageOne/>
+          <section id="core-concepts">
+          <h2>Core Concepts</h2>
+          <ul>
+            <CoreConcept
+              title="Components"
+              description="The core UI building block."
+              image={ImageOne}
+            />
+            <CoreConcept {...CORE_CONCEPTS[1]}/>
+          </ul>
+        </section>
+      </div>
+
+      <div className="footer">
+      footer
+      </div>
+      
+    </div>
   );
 }
 
