@@ -7,7 +7,7 @@ namespace ServiceRecord.Core.WebAPI.Models
     public class ResourceType
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ResourceTypeID { get; set; }
 
         //ResourceType is a primary table for JobResourceType table
