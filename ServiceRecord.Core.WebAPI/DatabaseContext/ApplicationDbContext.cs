@@ -94,8 +94,6 @@ namespace ServiceRecord.Core.WebAPI.DatabaseContext
             new SubJobType { SubJobID = 11, Description = "Drawing Updates" },
             new SubJobType { SubJobID = 12, Description = "Welding" },
             new SubJobType { SubJobID = 13, Description = "Production Support" }
-
-
         );
 
         }
