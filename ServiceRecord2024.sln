@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRecord.Core.WebAPI",
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "service.record.react.standalone", "Service.Record.React.Standalone\service.record.react.standalone.esproj", "{38BC03AC-3D31-40E6-A333-605D71DBDECF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "allpax_service_record", "..\Service-Record-Final-MAY21\Visual Studio\allpax_service_record.csproj", "{3213007B-7EC8-4EBC-8A4B-7E25A8A1B302}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,10 +23,6 @@ Global
 		{38BC03AC-3D31-40E6-A333-605D71DBDECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38BC03AC-3D31-40E6-A333-605D71DBDECF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{38BC03AC-3D31-40E6-A333-605D71DBDECF}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{3213007B-7EC8-4EBC-8A4B-7E25A8A1B302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3213007B-7EC8-4EBC-8A4B-7E25A8A1B302}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3213007B-7EC8-4EBC-8A4B-7E25A8A1B302}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3213007B-7EC8-4EBC-8A4B-7E25A8A1B302}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
